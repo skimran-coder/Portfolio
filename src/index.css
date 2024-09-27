@@ -1,13 +1,84 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #1a73e8;
+  --secondary-color: #fbbc05;
+}
+
+.theme-dark {
+  --background-color: #1a1a2e;
+  --text-color: #eaeaea;
+  --primary-color: #0f3460;
+  --secondary-color: #e94560;
+}
+
+.theme-light {
+  --background-color: #e0e0e0;
+  --text-color: #222222;
+  --primary-color: #4b7bec;
+  --secondary-color: #fc5c65;
+}
+
+.theme-red {
+  --primary-color: #ff4444;
+  --secondary-color: #ff8888;
+}
+
+.theme-blue {
+  --primary-color: #4488ff;
+  --secondary-color: #88aaff;
+}
+
+.theme-green {
+  --primary-color: #4caf50;
+  --secondary-color: #81c784;
+}
+
+.theme-purple {
+  --primary-color: #aa44ff;
+  --secondary-color: #dd88ff;
+}
+
+.theme-yellow {
+  --primary-color: #ffc107;
+  --secondary-color: #ffeb3b;
+}
+
+/* Applying the theme colors */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+
