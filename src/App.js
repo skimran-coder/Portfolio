@@ -1,13 +1,23 @@
 import "./App.css";
 import Header from "./components/main/Header";
 import Hero from "./components/main/Hero";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import DarkContext from "./utils/context/DarkContext";
 import ThemeContext from "./utils/context/ThemeContext";
+import Project from "./components/main/Project";
+import RootRefContext from "./utils/context/RootRefContext";
+import Footer from "./components/main/Footer";
+import AboutMe from "./components/main/About";
 
 function App() {
+  const rootRef = useRef();
+
   const [isDark, setIsDark] = useState(() => {
-    return localStorage.getItem("darkMode") === "true";
+    if (!localStorage.getItem("darkMode")) {
+      return true;
+    } else {
+      return localStorage.getItem("darkMode") === "true";
+    }
   });
 
   const [theme, setTheme] = useState(() => {
@@ -17,8 +27,17 @@ function App() {
   return (
     <DarkContext.Provider value={[isDark, setIsDark]}>
       <ThemeContext.Provider value={[theme, setTheme]}>
-        <Header />
-        <Hero />
+        <RootRefContext.Provider value={rootRef}>
+          <div ref={rootRef}>
+            <Header />
+            <main>
+              <Hero />
+              <Project />
+              <AboutMe />
+            </main>
+            <Footer />
+          </div>
+        </RootRefContext.Provider>
       </ThemeContext.Provider>
     </DarkContext.Provider>
   );

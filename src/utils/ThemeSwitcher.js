@@ -4,15 +4,21 @@ import ThemeContext from "../utils/context/ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
+import RootRefContext from "./context/RootRefContext";
 
 function ThemeSwitcher({ isSidebarOpen }) {
   const [isDark, setIsDark] = useContext(DarkContext);
   const [theme, setTheme] = useContext(ThemeContext);
-  console.log(isDark);
+  const rootRef = useContext(RootRefContext);
+
   const toggleDarkMode = () => {
     localStorage.setItem("darkMode", !isDark);
     setIsDark(!isDark);
   };
+
+  useEffect(() => {
+    document.body.classList.toggle("dark-mode", isDark);
+  }, [isDark]);
 
   // Change color theme
   const handleThemeChange = (e) => {
@@ -21,28 +27,15 @@ function ThemeSwitcher({ isSidebarOpen }) {
   };
 
   useEffect(() => {
-    document.body.classList.toggle("theme-dark", isDark);
-
     // Remove previous theme classes
     const themeClasses = document.body.className
       .split(" ")
-      .filter(
-        (className) =>
-          className.startsWith("theme-") && className !== "theme-dark"
-      );
+      .filter((className) => className.startsWith("theme-"));
     document.body.classList.remove(...themeClasses);
 
     // Add new theme class
     document.body.classList.add(`theme-${theme}`);
-
-    // Cleanup on unmount
-    // return () => {
-    //   document.body.classList.remove(`theme-${theme}`);
-    //   if (isDark) {
-    //     document.body.classList.remove("theme-dark");
-    //   }
-    // };
-  }, [isDark, theme]);
+  }, [theme]);
 
   return (
     <div
@@ -89,21 +82,11 @@ function ThemeSwitcher({ isSidebarOpen }) {
           onChange={handleThemeChange}
           className="text-white bg-primary rounded-md p-2 shadow-sm focus:outline-none transition duration-300 cursor-pointer"
         >
-          <option value="red">
-            Red
-          </option>
-          <option value="blue">
-            Blue
-          </option>
-          <option value="green">
-            Green
-          </option>
-          <option value="purple">
-            Purple
-          </option>
-          <option value="yellow">
-            Yellow
-          </option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="purple">Purple</option>
+          <option value="yellow">Yellow</option>
         </select>
       </div>
     </div>

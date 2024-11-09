@@ -4,7 +4,6 @@ import DarkContext from "../../utils/context/DarkContext";
 const Hero = () => {
   const [isDark] = useContext(DarkContext);
   const [photoPath, setPhotoPath] = useState("/asset/myPhoto_3.jpg");
-  console.log(isDark);
 
   useEffect(() => {
     if (isDark) {
@@ -15,14 +14,16 @@ const Hero = () => {
   }, [isDark]);
 
   return (
-    <main className=" w-5/6 m-auto lg:h-screen">
+    <section className=" w-5/6 m-auto lg:h-screen" id="home">
       <div className="lg:h-5/6 flex flex-col lg:flex-row justify-between items-center mt-8 lg:mt-0">
         <div className="flex  flex-col max-w-xl gap-2">
           <h2 className="text-primary font-extrabold font-merriweather mb-2 text-4xl lg:text-6xl overflow-hidden">
             Sk. Imran Hussain
           </h2>
-          <p className="text-secondary font-merriweather text-lg mb-4">Full Stack Developer</p>
-          <p className="text-md text-secondary font-merriweather opacity-80 mb-6">
+          <p className="text-text font-merriweather text-lg mb-4">
+            Full Stack Developer
+          </p>
+          <p className="text-md text-text font-merriweather opacity-80 mb-6">
             I specialize in creating dynamic and responsive web applications,
             utilizing the latest technologies in the MERN stack.
           </p>
@@ -53,7 +54,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

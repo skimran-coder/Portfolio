@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,31 +18,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 :root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --primary-color: #1a73e8;
-  --secondary-color: #fbbc05;
-}
-
-.theme-dark {
-  --background-color: #1a1a2e;
-  --text-color: #eaeaea;
-  --primary-color: #0f3460;
-  --secondary-color: #e94560;
-}
-
-.theme-light {
   --background-color: #e0e0e0;
   --text-color: #222222;
-  --primary-color: #4b7bec;
-  --secondary-color: #fc5c65;
+}
+
+.dark-mode {
+  --background-color: #1a1a2e;
+  --text-color: #eaeaea;
 }
 
 .theme-red {
@@ -80,5 +71,3 @@ button {
 button:hover {
   background-color: var(--secondary-color);
 }
-
-
