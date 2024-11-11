@@ -9,9 +9,15 @@ const Navlist = () => {
       <a href="#projects">
         <li>Projects</li>
       </a>
-      <li>Services</li>
-      <li>About</li>
-      <li>Contact</li>
+      <a href="#services">
+        <li>Services</li>
+      </a>
+      <a href="#about">
+        <li>About</li>
+      </a>
+      <a href="#contact">
+        <li>Contact</li>
+      </a>
     </>
   );
 };

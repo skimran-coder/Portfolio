@@ -8,6 +8,8 @@ import Project from "./components/main/Project";
 import RootRefContext from "./utils/context/RootRefContext";
 import Footer from "./components/main/Footer";
 import AboutMe from "./components/main/About";
+import Services from "./components/main/Services";
+import Contact from "./components/main/Contact";
 
 function App() {
   const rootRef = useRef();
@@ -33,7 +35,9 @@ function App() {
             <main>
               <Hero />
               <Project />
+              <Services />
               <AboutMe />
+              <Contact />
             </main>
             <Footer />
           </div>

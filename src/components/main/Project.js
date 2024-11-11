@@ -4,13 +4,15 @@ import Underline from "../Underline";
 
 const Project = () => {
   return (
-    <section className="w-5/6 m-auto mb-8 mt-8 sm:mt-0 lg:-mt-32" id="projects">
-
+    <section
+      className="w-5/6 m-auto mb-8 mt-8 sm:mt-0 lg:-mt-32 min-h-screen"
+      id="projects"
+    >
       <div className="flex justify-center items-center gap-2 mt-16">
-      <Underline/>
-      <h2 className="font-extrabold font-merriweather text-4xl lg:text-6xl py-4 opacity-50 ">
-        My Portfolio
-      </h2>
+        <Underline />
+        <h2 className="font-extrabold font-merriweather text-4xl lg:text-6xl py-4 opacity-50 ">
+          My Portfolio
+        </h2>
       </div>
 
       <h3 className="text-text font-merriweather text-2xl lg:text-4xl py-4 text-center opacity-90">

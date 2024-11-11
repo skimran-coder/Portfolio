@@ -1,12 +1,9 @@
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import SocialIcons from "../SocialIcons";
+import { SOCIAL_ICONS_URL } from "../../utils/constant";
 
 const Footer = () => {
   return (
@@ -51,56 +48,12 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex space-x-6">
-            <a
-              href="https://github.com/skimran-coder"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="w-5 h-5"
-              ></FontAwesomeIcon>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sk-imran-hussain/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="w-5 h-5"
-              ></FontAwesomeIcon>
-            </a>
-            <a
-              href="https://x.com/skimranhussain"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              <FontAwesomeIcon
-                icon={faXTwitter}
-                className="w-5 h-5"
-              ></FontAwesomeIcon>
-            </a>
-            <a
-              href="https://www.instagram.com/skimranhussain4/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="w-5 h-5"
-              ></FontAwesomeIcon>
-            </a>
+          <div className="flex space-x-6 text-gray-400">
+          {SOCIAL_ICONS_URL.map(({ name, url, icon }) => (
+              <SocialIcons name={name} url={url} icon={icon} key={name} />
+            ))}
+
+            
           </div>
         </div>
 
