@@ -9,10 +9,10 @@ import SocialIcons from "../SocialIcons";
 
 const About = () => {
   return (
-    <section className="mt-12 md:mt-0 mx-auto min-h-screen w-11/12 sm:w-5/6 px-4 sm:px-0" id="about">
+    <section className="mt-12 md:mt-0 mx-auto min-h-screen w-11/12 sm:w-5/6 px-4 sm:px-0 " id="about">
       <div className="flex justify-center items-center gap-2">
         <Underline />
-        <h2 className="font-extrabold font-merriweather text-4xl lg:text-6xl py-4 opacity-50 ">
+        <h2 className="font-extrabold font-merriweather text-4xl md:text-6xl py-4 opacity-50 ">
           About Me
         </h2>
       </div>

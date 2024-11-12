@@ -6,17 +6,17 @@ import { services } from "../../utils/constant";
 const Services = () => {
   return (
     <section
-      className="w-full px-4 sm:px-8 lg:px-16 bg-background text-text transition-colors duration-500 min-h-screen"
+      className="w-full px-4 sm:px-8 lg:px-16 bg-background text-text transition-colors duration-500 min-h-screen mb-20 xl:mb-0"
       id="services"
     >
       <div className="flex justify-center items-center gap-2">
-        <h2 className="font-extrabold font-merriweather text-4xl lg:text-6xl py-4 opacity-50 ">
+        <h2 className="font-extrabold font-merriweather text-4xl md:text-6xl py-4 opacity-50 ">
           Services
         </h2>
         <Underline />
       </div>
 
-      <h3 className="text-text font-merriweather text-xl lg:text-2xl py-4 text-center opacity-90 mb-12">
+      <h3 className="text-text font-merriweather text-xl md:text-2xl py-4 text-center opacity-90 mb-12 ">
         A brief of Offering services
       </h3>
 
