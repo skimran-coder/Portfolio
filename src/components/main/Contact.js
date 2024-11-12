@@ -69,7 +69,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div className="w-full sm:w-1/2 mt-8 sm:mt-0">
-          <img src="/asset/QR.svg" alt="qr" ></img>
+          <img src="/asset/QR.svg" alt="qr"></img>
         </div>
       </div>
     </div>
