@@ -8,7 +8,7 @@ This portfolio is a responsive, modern platform for potential employers, collabo
 
 ### 🔗 Live Demo
 
-[Visit my portfolio](https://your-portfolio-url.com)
+[Visit my portfolio](https://skimran-portfolio.vercel.app/)
 
 ## 🌟 Key Features
 
@@ -28,7 +28,7 @@ This portfolio is a responsive, modern platform for potential employers, collabo
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/skimran-coder/portfolio.git
+   git clone https://github.com/skimran-coder/Portfolio.git
    ```
 
 2. **Install Dependencies**:
