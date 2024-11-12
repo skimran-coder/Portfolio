@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -8,16 +8,11 @@ import {
 import Underline from "../Underline";
 
 const Contact = () => {
-  const [nameInput, setNameInput] = useState("");
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log(e.target);
-    console.log(Array.from(e.target));
-  }
-
   return (
-    <div className="min-h-screen mt-12 md:mt-0 flex flex-col items-center bg-secondary-light dark:bg-secondary-dark text-primary-dark dark:text-primary-light px-4 sm:px-8 w-5/6 mx-auto">
+    <section
+      className="min-h-screen mt-12 md:mt-0 flex flex-col items-center bg-background text-text px-4 sm:px-8 w-5/6 mx-auto"
+      id="contact"
+    >
       <div className="flex justify-center items-center gap-2">
         <h2 className="font-extrabold fonat-merriweather text-4xl md:text-6xl py-4 opacity-50 ">
           Contact Me
@@ -72,7 +67,7 @@ const Contact = () => {
           <img src="/asset/QR.svg" alt="qr"></img>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

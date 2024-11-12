@@ -4,12 +4,10 @@ import ThemeContext from "../utils/context/ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
-import RootRefContext from "./context/RootRefContext";
 
 function ThemeSwitcher({ isSidebarOpen }) {
   const [isDark, setIsDark] = useContext(DarkContext);
   const [theme, setTheme] = useContext(ThemeContext);
-  const rootRef = useContext(RootRefContext);
 
   const toggleDarkMode = () => {
     localStorage.setItem("darkMode", !isDark);
