@@ -44,7 +44,7 @@ const About = () => {
                 src={`/asset/icons/${icon}`}
                 alt={icon}
                 key={icon}
-                className="w-12 transition-all duration-150 ease-in hover:scale-110 hover:shadow-md hover:bg-gray-100 rounded-md hover:p-2"
+                className="w-12 transition-all duration-150 ease-in hover:scale-110 hover:shadow-md hover:bg-gray-100 rounded-md hover:p-2 "
               ></img>
             ))}
           </div>

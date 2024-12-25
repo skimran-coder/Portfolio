@@ -4,7 +4,12 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCode, faDatabase, faDesktop, faServer } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCode,
+  faDatabase,
+  faDesktop,
+  faServer,
+} from "@fortawesome/free-solid-svg-icons";
 
 const PROJECT_1_DESC =
   "A full-stack EdTech platform providing educational resources with video streaming and course management features.";
@@ -43,24 +48,25 @@ export const MY_INTRO = `Hi, I am Sk Imran Hussain!
           I am a MERN stack developer with a love for creating responsive websites and building efficient RESTful APIs. I focus on writing clear, maintainable code that follows industry best practices. I aim to make every project scalable and easy to manage over time. Beyond coding, I enjoy reading and writing to explore ideas in my free time.`;
 
 export const SKILL_ICONS_NAME = [
-  "mongodb.svg",
-  "Express.svg",
-  "React.svg",
-  "Node.js.svg",
-  "Next.js.svg",
-  "JavaScript.svg",
-  "TypeScript.svg",
-  "Tailwind CSS.svg",
-  "Redux.svg",
-  "Git.svg",
-  "CSS3.svg",
-  "HTML5.svg",
-  "GitHub.svg",
-  "Visual Studio Code (VS Code).svg",
-  "Vercel.svg",
-  "Firebase.svg",
-  "Postman.svg",
-  "Nodemon.svg",
+  "MongoDB",
+  "Express",
+  "React",
+  "Node.js",
+  "Next.js",
+  "JavaScript",
+  "TypeScript",
+  "PostgreSQL",
+  "Prisma",
+  "Tailwind CSS",
+  "Redux",
+  "Git",
+  "CSS3",
+  "HTML5",
+  "GitHub",
+  "VS Code",
+  "Vercel",
+  "Firebase",
+  "Postman",
 ];
 
 export const SOCIAL_ICONS_URL = [
@@ -89,22 +95,26 @@ export const SOCIAL_ICONS_URL = [
 export const services = [
   {
     title: "Frontend Development",
-    description: "Crafting responsive and engaging user interfaces using HTML, CSS, JavaScript, and modern libraries like React.",
+    description:
+      "Crafting responsive and engaging user interfaces using HTML, CSS, JavaScript, and modern libraries like React.",
     icon: faDesktop,
   },
   {
     title: "Backend Development",
-    description: "Building robust server-side applications with Node.js and Express, focusing on scalability and performance.",
+    description:
+      "Building robust server-side applications with Node.js and Express, focusing on scalability and performance.",
     icon: faServer,
   },
   {
     title: "API Integration",
-    description: "Designing and implementing RESTful APIs to enable seamless communication between different parts of an application.",
+    description:
+      "Designing and implementing RESTful APIs to enable seamless communication between different parts of an application.",
     icon: faCode,
   },
   {
     title: "Database Management",
-    description: "Efficiently managing data using MongoDB and other databases, ensuring data integrity and security.",
+    description:
+      "Efficiently managing data using MongoDB and other databases, ensuring data integrity and security.",
     icon: faDatabase,
   },
 ];
