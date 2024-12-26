@@ -2,7 +2,6 @@ import React from "react";
 import Underline from "../Underline";
 import {
   MY_INTRO,
-  SKILL_ICONS_NAME,
   SOCIAL_ICONS_URL,
 } from "../../utils/constant";
 import SocialIcons from "../SocialIcons";
@@ -39,14 +38,14 @@ const About = () => {
           Skills & Tools
           </h3>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-8 py-4 place-items-center">
-            {SKILL_ICONS_NAME.map((icon) => (
+            {/* {SKILL_ICONS_NAME.map((icon) => (
               <img
                 src={`/asset/icons/${icon}`}
                 alt={icon}
                 key={icon}
                 className="w-12 transition-all duration-150 ease-in hover:scale-110 hover:shadow-md hover:bg-gray-100 rounded-md hover:p-2 "
               ></img>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

@@ -1,10 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import DarkContext from "../../utils/context/DarkContext";
+import React, { useEffect } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "motion/react";
 import { animate, easeInOut } from "motion";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { SKILL_ICONS_NAME } from "../../utils/constant";
 import SkillsIconSlider from "../SkillsIconSlider";
 
 const Hero = () => {
@@ -31,35 +29,43 @@ const Hero = () => {
     >
       <section className="w-5/6 m-auto lg:h-screen z-10" id="home">
         <div className="lg:h-5/6 flex flex-col-reverse lg:flex-row justify-between items-center mt-8 lg:mt-0">
-          <div className="flex  flex-col max-w-xl gap-2 z-10">
+          <div className="flex  flex-col max-w-2xl gap-4 z-10">
+            <span className="text-blue-400 text-sm pl-2">Hi, my name is</span>
             <h2 className="text-[#e0e0e0] font-extrabold font-merriweather mb-2 text-4xl md:text-6xl overflow-hidden">
-              Sk. Imran Hussain
+              Sk. Imran Hussain.
             </h2>
-            <p className="text-[#e0e0e0] font-merriweather text-lg md:text-xl mb-4">
-              Full Stack Developer
-            </p>
-            <p className="text-base md:text-lg text-[#e0e0e0] font-merriweather opacity-80 mb-6">
+            <h2 className="text-[#e0e0e0] font-extrabold font-merriweather mb-2 text-4xl md:text-6xl overflow-hidden opacity-60">
+              Full stack developer.
+            </h2>
+            <p className="text-sm max-w-lg md:text-sm text-[#e0e0e0] font-merriweather opacity-80 mb-6">
               I specialize in creating dynamic and responsive web applications,
               utilizing the latest technologies in the MERN stack.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 py-4">
-              <motion.button
+            <div className="flex py-4 px-2">
+              <motion.a
                 style={{ border, boxShadow }}
-                className="text-white font-semibold font-merriweather py-2 px-4 rounded"
-                onClick={() =>
-                  (window.location.href =
-                    "mailto:skimranhussain4@example.com?subject=Hiring Inquiry")
-                }
-              >
-                Hire Me!
-              </motion.button>
-              <a
-                className="bg-gray-200 text-gray-800 font-semibold font-merriweather py-2 px-4 rounded shadow hover:bg-gray-300 transition duration-300 text-center"
+                z
+                className=" text-gray-300 font-semibold font-merriweather py-2 px-6 rounded-full border border-gray-800 text-center"
                 href="/asset/Imran_Resume.pdf"
                 download="Sk_Imran_Hussain_CV.pdf"
               >
-                Download CV
-              </a>
+                <span className=" gap-2 items-center flex">
+                  Download CV{" "}
+                  <svg
+                    width="25"
+                    height="16"
+                    viewBox="0 0 51 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <motion.path
+                      d="M50.7071 8.70711C51.0976 8.31658 51.0976 7.68342 50.7071 7.29289L44.3431 0.928932C43.9526 0.538408 43.3195 0.538408 42.9289 0.928932C42.5384 1.31946 42.5384 1.95262 42.9289 2.34315L48.5858 8L42.9289 13.6569C42.5384 14.0474 42.5384 14.6805 42.9289 15.0711C43.3195 15.4616 43.9526 15.4616 44.3431 15.0711L50.7071 8.70711ZM0 9H50V7H0L0 9Z"
+                      fill="white"
+                      pathLength={0}
+                    />
+                  </svg>
+                </span>
+              </motion.a>
             </div>
           </div>
           <div className="mb-8 lg:mt-0 p-2 ">
@@ -73,7 +79,6 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* component */}
       <SkillsIconSlider />
 
       <div className="absolute inset-0 z-0">
