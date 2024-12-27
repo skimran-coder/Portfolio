@@ -20,13 +20,33 @@ const PROJECT_2_DESC =
 const PROJECT_3_DESC =
   "Welcome to the Tic Tac Toe game project! This classic game allows two players to compete in a fun and strategic battle of Xs and Os.";
 
+const BRAINLY_DESC =
+  "Second Brain is a full-stack app for saving and organizing links. Users can manage personal collections or share them publicly, keeping resources and ideas easily accessible.";
+
 export const PROJECT_DATA = [
+  {
+    title: "Brainly",
+    description: BRAINLY_DESC,
+    imgName: "brainly.png",
+    githubUrl: "https://github.com/skimran-coder/brainly",
+    liveUrl: "https://brainly-notes.vercel.app/",
+    techIcons: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+    ],
+  },
   {
     title: "Knowledge Nation",
     description: PROJECT_1_DESC,
     imgName: "project_1.png",
     githubUrl: "https://github.com/skimran-coder/Knowledge-Nation",
     liveUrl: "https://knowledgenation.web.app/",
+    techIcons: ["React", "Redux", "Firebase", "Tailwind CSS"],
   },
   {
     title: "Weather App",
@@ -34,6 +54,7 @@ export const PROJECT_DATA = [
     imgName: "project_2.png",
     githubUrl: "https://github.com/skimran-coder/Weather_App",
     liveUrl: "https://skimran-coder.github.io/Weather_App/",
+    techIcons: ["HTML5", "CSS3", "JavaScript", "VS Code"],
   },
   {
     title: "Tic Tac Toe",
@@ -41,6 +62,7 @@ export const PROJECT_DATA = [
     imgName: "project_3.png",
     githubUrl: "https://github.com/skimran-coder/TicTacToe",
     liveUrl: "https://skimran-coder.github.io/TicTacToe/",
+    techIcons: ["HTML5", "CSS3", "JavaScript", "VS Code"],
   },
 ];
 
