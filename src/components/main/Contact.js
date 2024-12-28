@@ -156,7 +156,7 @@ const Contact = () => {
           className="text-gray-300 font-semibold font-merriweather py-2 px-6 border-gray-800 text-center flex gap-2 rounded-full border my-8"
           onClick={() =>
             (window.location.href =
-              "mailto:skimranhussain4@example.com?subject=Hiring Inquiry")
+              "mailto:skimranhussain4@gmail.com?subject=Hiring Inquiry")
           }
         >
           <span className="">Get in touch</span>
