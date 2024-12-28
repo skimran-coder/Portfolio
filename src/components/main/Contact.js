@@ -86,31 +86,19 @@ const Contact = () => {
 
             <div className="flex justify-around items-center mt-4 overflow-visible">
               <div className="flex flex-col items-center relative overflow-visible">
-                <FontAwesomeIcon
-                  icon={faLaptop}
-                  className="text-2xl peer"
-                />
+                <FontAwesomeIcon icon={faLaptop} className="text-2xl peer" />
                 <ToolTip text={"love to code"} />
               </div>
               <div className="flex flex-col items-center relative overflow-visible">
-                <FontAwesomeIcon
-                  icon={faGamepad}
-                  className="text-2xl peer"
-                />
+                <FontAwesomeIcon icon={faGamepad} className="text-2xl peer" />
                 <ToolTip text={"born to play"} />
               </div>
               <div className="flex flex-col items-center relative overflow-visible">
-                <FontAwesomeIcon
-                  icon={faBook}
-                  className="text-2xl peer"
-                />
+                <FontAwesomeIcon icon={faBook} className="text-2xl peer" />
                 <ToolTip text={"occasional reader"} />
               </div>
               <div className="flex flex-col items-center relative overflow-visible">
-                <FontAwesomeIcon
-                  icon={faPen}
-                  className="text-2xl peer"
-                />
+                <FontAwesomeIcon icon={faPen} className="text-2xl peer" />
                 <ToolTip text={"broken writer"} />
               </div>
             </div>
@@ -138,14 +126,16 @@ const Contact = () => {
             </p>
 
             <div className="flex justify-between items-center overflow-visible">
-              <div className="flex justify-center mt-4">
-                <QrCode url={"https://linktr.ee/skimrancoder"} maxWidth={50} />
-              </div>
 
-              <div className="flex justify-center gap-4 mt-4 overflow-visible">
+              <div className="flex justify-center gap-2 sm:gap-4 md:gap-2 lg:gap-6 mt-4 overflow-visible">
                 {SOCIAL_ICONS_URL.map(({ name, url, icon }) => (
                   <SocialIcons key={name} name={name} url={url} icon={icon} />
                 ))}
+
+              </div>
+              
+              <div className="flex justify-center mt-4">
+                <QrCode url={"https://linktr.ee/skimrancoder"} maxWidth={50} />
               </div>
             </div>
           </motion.div>
@@ -160,7 +150,9 @@ const Contact = () => {
               "mailto:skimranhussain4@gmail.com?subject=Hiring Inquiry")
           }
         >
-          <span className="group-hover:pr-4 transition-all duration-150 ease-in-out">Get in touch</span>
+          <span className="group-hover:pr-4 transition-all duration-150 ease-in-out">
+            Get in touch
+          </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="size-6 opacity-0 absolute right-4 group-hover:right-2 group-hover:opacity-100 transition-all duration-150 ease-in-out "
@@ -172,10 +164,6 @@ const Contact = () => {
             viewBox="0 0 512 243.58"
           >
             <path
-              variants={{
-                hidden: { right: "150%" },
-                visible: { right: "50%" },
-              }}
               fillRule="nonzero"
               d="M373.57 0 512 120.75 371.53 243.58l-20.92-23.91 94.93-83L0 137.09v-31.75l445.55-.41-92.89-81.02z"
               fill="#fff"
