@@ -91,7 +91,7 @@ const ProjectCard = ({ data, index }) => {
           >
             <FontAwesomeIcon
               icon={faGithub}
-              className="text-xl hover:scale-105"
+              className="text-lg sm:text-xl hover:scale-105"
             />
             <span className="text-sm lg:text-base">GitHub</span>
           </a>
@@ -103,7 +103,7 @@ const ProjectCard = ({ data, index }) => {
           >
             <FontAwesomeIcon
               icon={faGlobe}
-              className="text-xl hover:scale-105"
+              className="text-lg sm:text-xl hover:scale-105"
             />
             <span className="text-sm lg:text-base">Live Demo</span>
           </a>
