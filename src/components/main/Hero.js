@@ -1,16 +1,15 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext } from "react";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import SkillsIconSlider from "../SkillsIconSlider";
-import { motion, useAnimation } from "motion/react";
+import { motion } from "motion/react";
 import MotionContext from "../../utils/context/MotionContext";
 
 const Hero = () => {
   const [backgroundImage, backgroundImage2, border, boxShadow] =
     useContext(MotionContext);
 
-
- 
+  console.log(backgroundImage2);
 
   return (
     <motion.div
@@ -25,7 +24,7 @@ const Hero = () => {
             <h2 className="text-[#e0e0e0] font-extrabold font-merriweather mb-2 text-3xl sm:text-4xl md:text-6xl overflow-hidden">
               Sk. Imran Hussain.
             </h2>
-            <h2 className="text-[#e0e0e0] font-extrabold font-merriweather mb-2 text-3xl sm:text-4xl md:text-6xl overflow-hidden opacity-60">
+            <h2 className="text-[#e0e0e0] font-extrabold font-merriweather mb-2 text-3xl sm:text-4xl md:text-6xl overflow-hidden opacity-60 ">
               Full stack developer.
             </h2>
             <p className="text-sm max-w-lg md:text-sm text-[#e0e0e0] font-merriweather opacity-80 mb-6">
