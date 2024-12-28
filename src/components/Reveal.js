@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "motion/react";
 
-const Reveal = ({ children, width }) => {
+const Reveal = ({ children, width, direction }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControl = useAnimation();
@@ -29,7 +29,11 @@ const Reveal = ({ children, width }) => {
       </motion.div>
 
       <motion.div
-        variants={{ hidden: { right: 0 }, visible: { right: "100%" } }}
+        variants={
+          direction === "right"
+            ? { hidden: { right: 0 }, visible: { right: "100%" } }
+            : { hidden: { left: 0 }, visible: { left: "100%" } }
+        }
         initial="hidden"
         animate={slideControls}
         transition={{ duration: 0.5, ease: "easeIn" }}

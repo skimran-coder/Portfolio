@@ -9,12 +9,6 @@ const Navlist = () => {
       <a href="#projects">
         <li>Projects</li>
       </a>
-      <a href="#services">
-        <li>Services</li>
-      </a>
-      <a href="#about">
-        <li>About</li>
-      </a>
       <a href="#contact">
         <li>Contact</li>
       </a>

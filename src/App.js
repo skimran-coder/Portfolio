@@ -5,7 +5,6 @@ import DarkContext from "./utils/context/DarkContext";
 import ThemeContext from "./utils/context/ThemeContext";
 import Project from "./components/main/Project";
 import Footer from "./components/main/Footer";
-import AboutMe from "./components/main/About";
 import Contact from "./components/main/Contact";
 import { useMotionTemplate, useMotionValue } from "motion/react";
 import { animate, easeInOut } from "motion/react";
@@ -51,7 +50,6 @@ function App() {
           <main>
             <Hero />
             <Project />
-            <AboutMe />
             <Contact />
           </main>
           <Footer />

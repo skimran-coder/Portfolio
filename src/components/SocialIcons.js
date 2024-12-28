@@ -22,10 +22,9 @@ const SocialIcons = ({ name, url, icon }) => {
       >
         <FontAwesomeIcon
           icon={icon}
-          className="hover:text-primary transition"
+          className="hover:text-blue-400 transition size-6 md:size-8"
         />
       </a>
-      <ToolTip text={name} />
     </div>
   );
 };

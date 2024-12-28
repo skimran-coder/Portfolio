@@ -1,4 +1,3 @@
-
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -15,52 +14,16 @@ const Footer = () => {
             Built with{" "}
             <FontAwesomeIcon
               icon={faHeart}
-              className="text-primary"
+              className="text-blue-400"
             ></FontAwesomeIcon>{" "}
             by <span className="font-semibold">Sk Imran Hussain</span>
           </p>
 
-          {/* Navigation Links */}
-          <div className="flex space-x-8">
-            <a
-              href="#projects"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              Projects
-            </a>
-            <a
-              href="#services"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              Services
-            </a>
-            <a
-              href="#about"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              Contact
-            </a>
-          </div>
-
-          <div className="flex space-x-6 text-gray-400">
-          {SOCIAL_ICONS_URL.map(({ name, url, icon }) => (
-              <SocialIcons name={name} url={url} icon={icon} key={name} />
-            ))}
-
-            
-          </div>
+          <p className="text-center text-gray-500 text-sm mt-6">
+            &copy; {new Date().getFullYear()} Sk Imran Hussain. All rights
+            reserved.
+          </p>
         </div>
-
-        <p className="text-center text-gray-500 text-sm mt-6">
-          &copy; {new Date().getFullYear()} Sk Imran Hussain. All rights
-          reserved.
-        </p>
       </div>
     </footer>
   );

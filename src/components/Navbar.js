@@ -7,24 +7,24 @@ import Navlist from "./Navlist";
 const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
     <>
-      <div className="hidden md:block">
+      <div className="">
         <nav>
-          <ul className="flex gap-4 text-lg">
+          <ul className="flex gap-4 sm:gap-8 text-lg">
             <Navlist />
           </ul>
         </nav>
       </div>
-      <div className="lg:hidden">
+      {/* <div className="lg:hidden">
         {!isSidebarOpen && (
           <FontAwesomeIcon
             icon={faBars}
             onClick={() => setIsSidebarOpen((prevState) => !prevState)}
           ></FontAwesomeIcon>
         )}
-      </div>
-      <div className="hidden lg:block">
+      </div> */}
+      {/* <div className="hidden lg:block">
         <ThemeSwitcher />
-      </div>
+      </div> */}
     </>
   );
 };

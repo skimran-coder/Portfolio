@@ -3,14 +3,14 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext, useEffect, useRef } from "react";
 import MotionContext from "../utils/context/MotionContext";
-import { motion, useAnimation, useInView } from "motion/react";
+import { motion, useAnimationControls, useInView } from "motion/react";
 
 const ProjectCard = ({ data, index }) => {
   const { title, description, imgName, githubUrl, liveUrl, techIcons } = data;
   const Motion = useContext(MotionContext);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const cardControl = useAnimation();
+  const cardControl = useAnimationControls();
 
   const border = Motion[2];
   const boxShadow = Motion[3];
@@ -25,13 +25,16 @@ const ProjectCard = ({ data, index }) => {
 
   return (
     <motion.div
-      variants={{ hidden: { x }, visible: { x: "0" } }}
+      variants={{ hidden: { x, opacity: 0 }, visible: { x: 0, opacity: 1 } }}
       initial="hidden"
       animate={cardControl}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
       ref={ref}
-      style={{ border, boxShadow }}
-      className={`w-3/4 border p-6 rounded-lg flex gap-6 transition-all duration-300 ease-in-out hover:shadow-lg ${
+      style={{
+        border,
+        boxShadow,
+      }}
+      className={`w-3/4 border p-6 rounded-lg flex gap-6 transition-all duration-300 ease-in-out hover:shadow-lg m-2 ${
         index % 2 !== 0
           ? "xl:flex-row-reverse flex-col justify-start bg-[#222C5D] hover:bg-[#1C2750]"
           : "xl:flex-row flex-col justify-end bg-[#131C45] hover:bg-[#0F183A]"
@@ -63,7 +66,7 @@ const ProjectCard = ({ data, index }) => {
               {description}
             </p>
 
-            {/* Tags */}
+            {/* icons */}
             <div className="flex gap-2 flex-wrap mb-4">
               {techIcons &&
                 techIcons.map((icon) => (
@@ -71,6 +74,7 @@ const ProjectCard = ({ data, index }) => {
                     src={`asset/icons/${icon}.svg`}
                     alt="icon"
                     className="size-6"
+                    key={icon}
                   ></img>
                 ))}
             </div>
