@@ -15,7 +15,7 @@ const Project = () => {
       className=" xl:pb-0  lg:-pt-32"
       style={{ backgroundImage: backgroundImage2 }}
     >
-      <section className="w-5/6 m-auto min-h-screen pb-20" id="projects">
+      <section className="w-5/6 m-auto min-h-screen pb-20 mb-20" id="projects">
         <div className="flex justify-center items-center gap-2 mt-16">
           <Underline />
           <Reveal width={"fit-content"} direction={"right"}>

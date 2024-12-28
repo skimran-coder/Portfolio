@@ -19,7 +19,7 @@ import { motion, useAnimationControls, useInView } from "motion/react";
 
 const Contact = () => {
   const Motion = useContext(MotionContext);
-  const backgroundImage2 = Motion[1];
+  const backgroundImage = Motion[0];
   const border = Motion[2];
   const boxShadow = Motion[3];
 
@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <motion.div
-      style={{ backgroundImage: backgroundImage2 }}
+      style={{ backgroundImage }}
       className="min-h-screen w-screen  text-[#FDF9E8] "
     >
       <section
@@ -76,7 +76,7 @@ const Contact = () => {
             animate={cardControl}
             transition={{ duration: 0.5, ease: "easeIn" }}
             style={{ border, boxShadow }}
-            className="border w-full md:w-1/2 lg:w-1/3 p-8 space-y-6 bg-[#1E1F28] rounded-md flex flex-col justify-between m-2"
+            className="border w-full md:w-1/2 lg:w-1/3 p-8 space-y-6 bg-[#1E1F28] rounded-md flex flex-col justify-between md:m-2"
           >
             <div className="flex  flex-col gap-2">
               <h4 className="font-bold text-xl text-primary-light">About Me</h4>
@@ -125,7 +125,7 @@ const Contact = () => {
             animate={cardControl}
             transition={{ duration: 0.5, ease: "easeIn" }}
             style={{ border, boxShadow }}
-            className="border w-full md:w-1/2 p-8 space-y-6 bg-[#1E1F28] rounded-md m-2"
+            className="border w-full md:w-1/2 p-8 space-y-6 bg-[#1E1F28] rounded-md md:m-2"
           >
             <h4 className="font-bold text-xl text-primary-light">
               Connect with Me
