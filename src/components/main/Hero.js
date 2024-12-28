@@ -35,14 +35,16 @@ const Hero = () => {
             <div className="flex py-4 px-2">
               <motion.a
                 style={{ border, boxShadow }}
-                className=" text-gray-300 font-semibold font-merriweather py-2 px-6 rounded-full border border-gray-800 text-center flex gap-2"
+                className=" text-gray-300 font-semibold font-merriweather py-2 px-6 rounded-full border border-gray-800 text-center flex gap-2 relative group"
                 href="/asset/Imran_Resume.pdf"
                 download="Sk_Imran_Hussain_CV.pdf"
               >
-                <span className=" ">Download CV </span>
+                <span className="group-hover:pr-4 transition-all duration-150 ease-in-out">
+                  Download CV{" "}
+                </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-6"
+                  className="opacity-0 size-6 absolute right-4 group-hover:right-2 group-hover:opacity-100 transition-all duration-150 ease-in-out -z-10"
                   shapeRendering="geometricPrecision"
                   textRendering="geometricPrecision"
                   imageRendering="optimizeQuality"
@@ -51,10 +53,6 @@ const Hero = () => {
                   viewBox="0 0 512 243.58"
                 >
                   <path
-                    variants={{
-                      hidden: { right: "150%" },
-                      visible: { right: "50%" },
-                    }}
                     fillRule="nonzero"
                     d="M373.57 0 512 120.75 371.53 243.58l-20.92-23.91 94.93-83L0 137.09v-31.75l445.55-.41-92.89-81.02z"
                     fill="#fff"

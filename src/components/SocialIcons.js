@@ -1,10 +1,9 @@
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const ToolTip = ({ text }) => {
+export const ToolTip = ({ text }) => {
   return (
-    <span className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 peer-hover:opacity-100 text-sm transition-opacity bg-secondary text-text rounded px-2 py-1 shadow-lg">
+    <span className="absolute font-merriweather tracking-wider bottom-10 left-1/2 -translate-x-1/2 opacity-0  peer-hover:opacity-100 text-sm transition-opacity bg-blue-900 text-white rounded px-2 py-1 shadow-lg whitespace-nowrap">
       {text}
     </span>
   );
@@ -25,6 +24,7 @@ const SocialIcons = ({ name, url, icon }) => {
           className="hover:text-blue-400 transition size-6 md:size-8"
         />
       </a>
+      <ToolTip text={name} />
     </div>
   );
 };
