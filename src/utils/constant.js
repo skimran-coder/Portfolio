@@ -11,19 +11,32 @@ import {
   faServer,
 } from "@fortawesome/free-solid-svg-icons";
 
-const PROJECT_1_DESC =
+const KNOWLEDGE_NATION_DESC =
   "A full-stack EdTech platform providing educational resources with video streaming and course management features.";
-
-const PROJECT_2_DESC =
-  "The Weather App is a simple web application that allows users to check the weather for their current location or search for the weather in a specific city.";
-
-const PROJECT_3_DESC =
-  "Welcome to the Tic Tac Toe game project! This classic game allows two players to compete in a fun and strategic battle of Xs and Os.";
 
 const BRAINLY_DESC =
   "Second Brain is a full-stack app for saving and organizing links. Users can manage personal collections or share them publicly, keeping resources and ideas easily accessible.";
 
+const FOOD_APP_DESC =
+  "A dynamic food delivery app inspired by Swiggy, featuring location-based browsing, live search, and restaurant sorting with a sleek UI. Built with React, Tailwind CSS, and a TypeScript backend for seamless API integration.";
+
 export const PROJECT_DATA = [
+  {
+    title: "Food App",
+    description: FOOD_APP_DESC,
+    imgName: "foodapp.png",
+    githubUrl: "https://github.com/skimran-coder/Food-App",
+    liveUrl: "https://food-store-online.vercel.app/",
+    techIcons: [
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "Express",
+    ],
+  },
   {
     title: "Brainly",
     description: BRAINLY_DESC,
@@ -42,27 +55,11 @@ export const PROJECT_DATA = [
   },
   {
     title: "Knowledge Nation",
-    description: PROJECT_1_DESC,
+    description: KNOWLEDGE_NATION_DESC,
     imgName: "project_1.png",
     githubUrl: "https://github.com/skimran-coder/Knowledge-Nation",
     liveUrl: "https://knowledgenation.web.app/",
     techIcons: ["React", "Redux", "Firebase", "Tailwind CSS"],
-  },
-  {
-    title: "Weather App",
-    description: PROJECT_2_DESC,
-    imgName: "project_2.png",
-    githubUrl: "https://github.com/skimran-coder/Weather_App",
-    liveUrl: "https://skimran-coder.github.io/Weather_App/",
-    techIcons: ["HTML5", "CSS3", "JavaScript", "VS Code"],
-  },
-  {
-    title: "Tic Tac Toe",
-    description: PROJECT_3_DESC,
-    imgName: "project_3.png",
-    githubUrl: "https://github.com/skimran-coder/TicTacToe",
-    liveUrl: "https://skimran-coder.github.io/TicTacToe/",
-    techIcons: ["HTML5", "CSS3", "JavaScript", "VS Code"],
   },
 ];
 
