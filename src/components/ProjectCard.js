@@ -32,7 +32,7 @@ const ProjectCard = ({ data, index }) => {
       ref={ref}
       style={{
         border,
-        boxShadow,
+        boxShadow, 
       }}
       className={`w-3/4 border p-6 rounded-lg flex gap-6 transition-all duration-300 ease-in-out hover:shadow-lg m-2 ${
         index % 2 !== 0
