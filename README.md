@@ -15,12 +15,11 @@ This portfolio is a responsive, modern platform for potential employers, collabo
 - **Introduction & Skills**: A clear, concise overview of my technical skills and development expertise.
 - **Projects**: Showcases of selected projects with live links and code repositories for reference.
 - **Responsive Design**: Fully responsive and optimized for both desktop and mobile views.
-- **Multiple Color Themes**: Light and Dark mode support, with an option to switch themes for a personalized user experience.
-- **Real-Time Contact**: Messaging feature that enables direct, real-time communication.
+- **Smooth Animation**: Beautiful smooth animation with motion library.
 
 ## ⚙️ Tech Stack
 
-- **Frontend**: React, Tailwind CSS
+- **Frontend**: React, Tailwind CSS, Motion
 - **Additional Libraries**: Font Awesome for icons
 - **Tools & Services**: GitHub for version control, Vercel/Netlify for deployment
 
@@ -50,7 +49,7 @@ This portfolio is a responsive, modern platform for potential employers, collabo
 
 - **src/components**: Reusable UI components.
 - **src/assets**: Images, icons, and other assets.
-- **src/pages**: Main pages, including Home, About, Projects, and Contact.
+- **src/pages**: Main pages, including Home, Projects, and Contact.
 
 ## 🚀 Future Enhancements
 
